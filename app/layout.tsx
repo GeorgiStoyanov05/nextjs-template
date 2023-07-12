@@ -31,7 +31,7 @@ export default function RootLayout({
           </Link>
         </nav>
         <main className="main-container">{children}</main>
-        <footer>Created by someone hungry 🍔</footer>
+        <footer>Created by an average Joe Rogan enjoyer 🍔</footer>
       </body>
     </html>
   );
