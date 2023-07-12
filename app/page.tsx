@@ -1,10 +1,13 @@
 /* eslint-disable @next/next/no-img-element */
+import clients from "./utils/clients.js"
+import ClientCard from "./clientCard.js"
+import burgers from "./utils/burgers.js"
 
 export default function Home() {
   return (
     <div>
       <div className="cover">
-        <h1 className="title">Enter your title</h1>
+        <h1 className="title">БургИр Крal</h1>
       </div>
 
       <div className="columns">
@@ -49,58 +52,15 @@ export default function Home() {
       <div className="container">
         <h2 className="section-title">Gallery</h2>
         <div className="gallery">
-          <img className="gallery-image" src="/image01.jpg" alt="image01" />
-          <img className="gallery-image" src="/image02.jpg" alt="image01" />
-          <img className="gallery-image" src="/image01.jpg" alt="image01" />
-          <img className="gallery-image" src="/image01.jpg" alt="image01" />
-          <img className="gallery-image" src="/image01.jpg" alt="image01" />
-          <img className="gallery-image" src="/image01.jpg" alt="image01" />
+          {burgers.map(burger=><img className="gallery-image" src={burger} alt="image01" />)}
+
         </div>
       </div>
 
       <div className="container">
         <h2 className="section-title">Our clients</h2>
         <div className="card-container">
-          <div className="card">
-            <img className="avatar" src="/avatar.png" alt="avatar" />
-            <h3 className="card-name">Name</h3>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos
-              pariatur ullam aliquid inventore nam, eligendi unde, obcaecati hic
-              minima perferendis numquam. Aliquam esse non possimus mollitia,
-              quisquam atque! Explicabo, hic?
-            </p>
-          </div>
-          <div className="card">
-            <img className="avatar" src="/avatar.png" alt="avatar" />
-            <h3 className="card-name">Name</h3>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos
-              pariatur ullam aliquid inventore nam, eligendi unde, obcaecati hic
-              minima perferendis numquam. Aliquam esse non possimus mollitia,
-              quisquam atque! Explicabo, hic?
-            </p>
-          </div>
-          <div className="card">
-            <img className="avatar" src="/avatar.png" alt="avatar" />
-            <h3 className="card-name">Name</h3>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos
-              pariatur ullam aliquid inventore nam, eligendi unde, obcaecati hic
-              minima perferendis numquam. Aliquam esse non possimus mollitia,
-              quisquam atque! Explicabo, hic?
-            </p>
-          </div>
-          <div className="card">
-            <img className="avatar" src="/avatar.png" alt="avatar" />
-            <h3 className="card-name">Name</h3>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos
-              pariatur ullam aliquid inventore nam, eligendi unde, obcaecati hic
-              minima perferendis numquam. Aliquam esse non possimus mollitia,
-              quisquam atque! Explicabo, hic?
-            </p>
-          </div>
+          {clients.map(client=><ClientCard {...client}/>)}
         </div>
       </div>
     </div>
